@@ -1,0 +1,23 @@
+name: RankShop
+version: '1.0-SNAPSHOT'
+main: me.rimuru.rankShop.RankShop
+api-version: '1.21'
+authors:
+  - Rimuru
+
+commands:
+  rankshop:
+    description: Open the rank shop GUI
+    permission: rankshop.open
+
+  rankshopbal:
+    description: Admin currency modification commands
+    permission: rankshop.admin
+
+permissions:
+  rankshop.open:
+    default: true
+  rankshop.admin:
+    default: op
+
+depend: [LuckPerms, PlaceholderAPI]

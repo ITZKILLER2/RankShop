@@ -1,0 +1,90 @@
+currency:
+  name: "Tokens"
+  symbol: "⛁"
+
+gui:
+  title: "Rank Shop"
+  rows: 3
+  filler: true
+  items:
+    - slot: 10
+      key: bronze
+      material: LEATHER_CHESTPLATE
+    - slot: 11
+      key: chain
+      material: CHAINMAIL_CHESTPLATE
+    - slot: 12
+      key: iron
+      material: IRON_CHESTPLATE
+    - slot: 13
+      key: diamond
+      material: DIAMOND_CHESTPLATE
+    - slot: 14
+      key: netherite
+      material: NETHERITE_CHESTPLATE
+    - slot: 22
+      key: info
+      material: TOTEM_OF_UNDYING
+
+ranks:
+  bronze:
+    display: "&6Bronze Rank"
+    price: 50
+    luckperms-group: "bronze"
+    lore:
+      - "&7Purchase Bronze Rank"
+      - "&7Cost: 50 Tokens"
+
+  chain:
+    display: "&7Chain Rank"
+    price: 100
+    luckperms-group: "chain"
+    lore:
+      - "&7Purchase Chain Rank"
+      - "&7Cost: 100 Tokens"
+
+  iron:
+    display: "&fIron Rank"
+    price: 250
+    luckperms-group: "iron"
+    lore:
+      - "&7Purchase Iron Rank"
+      - "&7Cost: 250 Tokens"
+
+  diamond:
+    display: "&bDiamond Rank"
+    price: 600
+    luckperms-group: "diamond"
+    lore:
+      - "&7Purchase Diamond Rank"
+      - "&7Cost: 600 Tokens"
+
+  netherite:
+    display: "&8Netherite Rank"
+    price: 1500
+    luckperms-group: "netherite"
+    lore:
+      - "&7Purchase Netherite Rank"
+      - "&7Cost: 1500 Tokens"
+
+  info:
+    display: "&eRank Shop"
+    price: 0
+    luckperms-group: ""
+    lore:
+      - "&7Browse rank purchases."
+      - "&7Your Tokens: %rankshop_balance%"
+
+economy:
+  file: balances.yml
+
+messages:
+  open: "&aOpened the Rank Shop."
+  not-enough: "&cYou need %price% %currency%."
+  bought: "&aPurchased %rank% for %price% %currency%!"
+  already: "&eYou already own this rank."
+  no-permission: "&cYou do not have permission."
+  admin-set: "&aSet %player%'s balance to %amount%."
+  admin-add: "&aAdded %amount% to %player%."
+  admin-remove: "&aRemoved %amount% from %player%."
+  error: "&cSomething went wrong."

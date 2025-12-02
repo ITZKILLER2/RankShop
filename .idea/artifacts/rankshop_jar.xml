@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="rankshop:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/rankshop_jar</output-path>
+    <root id="archive" name="rankshop.jar">
+      <element id="module-output" name="rankshop" />
+    </root>
+  </artifact>
+</component>
