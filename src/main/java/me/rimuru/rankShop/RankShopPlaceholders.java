@@ -12,7 +12,7 @@ public class RankShopPlaceholders extends PlaceholderExpansion {
     }
 
     @Override public String getIdentifier() { return "rankshop"; }
-    @Override public String getAuthor() { return "MC Plugin Pro"; }
+    @Override public String getAuthor() { return "Rimuru"; }
     @Override public String getVersion() { return plugin.getDescription().getVersion(); }
     @Override public boolean persist() { return true; }
 
