@@ -32,6 +32,23 @@ public final class RankShop extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new InventoryListener(this), this);
 
         getCommand("rankshop").setExecutor((sender, cmd, label, args) -> {
+            // /rankshop reload
+            if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
+
+                if (!sender.hasPermission("rankshop.admin")) {
+                    sender.sendMessage(Utils.color("&cYou do not have permission."));
+                    return true;
+                }
+
+                sender.sendMessage(Utils.color("&eReloading RankShop..."));
+
+                this.reloadConfig();
+                economy.load();
+
+                sender.sendMessage(Utils.color("&aRankShop reloaded successfully!"));
+                return true;
+            }
+
             if (!(sender instanceof org.bukkit.entity.Player p)) {
                 sender.sendMessage("Players only.");
                 return true;
@@ -43,6 +60,7 @@ public final class RankShop extends JavaPlugin {
             gui.openShop(p);
             return true;
         });
+
 
         getCommand("rankshopbal").setExecutor(new CommandsAdminBalance(this));
 
